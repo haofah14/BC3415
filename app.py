@@ -2,6 +2,7 @@ from flask import Flask,render_template,request
 import google.generativeai as genai
 import textblob
 import os
+import requests
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -9,6 +10,7 @@ api = os.getenv("MAKERSUITE")
 api_key = os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash")
+stability_api_key = os.getenv('STABILITY_API_KEY')  
 
 app = Flask(__name__)
 
@@ -35,6 +37,10 @@ def sentiment_analysis_result():
     q = request.form.get("q")
     r=textblob.TextBlob(q).sentiment
     return(render_template("sentiment_analysis_result.html",r=r))
+
+@app.route("/transfer_money", methods=["GET", "POST"])
+def transfer_money():
+    return render_template("transfer_money.html")
 
 if __name__ == "__main__":
     app.run()

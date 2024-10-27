@@ -1,16 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Hao Fah's Web Application</title>
 </head>
-
 <body>
-<div class="container">
-    <h2>Welcome to Hao Fah's Web Application!</h2>
-    <form action="/sentiment_analysis" method="post">
-        <input type="submit" value="Sentiment Analysis">
-    </form>
-    <form action="/financial_FAQ" method="post">
-        <input type="submit" value="Financial FAQ">
-    </form>
-</div>
+    <div class="container">
+        <h2>Welcome to Hao Fah's Web Application!</h2>
+        <form action="/sentiment_analysis" method="post">
+            <input type="submit" value="Sentiment Analysis">
+        </form>
+        <form action="/financial_FAQ" method="post">
+            <input type="submit" value="Financial FAQ">
+        </form>
+        <form action="/transfer_money" method="post">
+            <input type="submit" value="Transfer Money">
+        </form>
+    </div>
 </body>
+</html>

@@ -78,8 +78,9 @@ input:focus, button:focus {
     border-color: #007bff;
 }
 
+/* Neutral color update for buttons */
 button {
-    background-color: #28a745;
+    background-color: #6c757d; /* Neutral gray */
     color: white;
     border: none;
     cursor: pointer;
@@ -87,7 +88,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #5a6268; /* Darker gray on hover */
     transform: scale(1.05);
 }
 
